@@ -311,8 +311,9 @@ footer p {
 }
 
 .carousel img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Define a largura da imagem como 100% do contêiner */
+    height: 300px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
     border-radius: 10px;
 }
 
@@ -322,4 +323,17 @@ footer p {
 
 .slick-dots li button:before {
     color: #1D2B3A;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel img {
+        height: 200px; /* Reduz a altura das imagens em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel img {
+        height: 150px; /* Reduz ainda mais a altura em telas muito pequenas */
+    }
 }
