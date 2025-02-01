@@ -222,7 +222,54 @@
             <img id="sobre-imagem" src="images/thiago-vieira.jpg" alt="Thiago Vieira" class="sobre-imagem">
             <p>Eu sou Thiago Vieira, arquiteto e empresário da construção civil, com anos de experiência no setor. Ao longo da minha carreira, me dedico a criar soluções inovadoras e personalizadas para cada projeto, sempre com foco em garantir excelência, qualidade e a satisfação dos clientes. Quando projetamos um espaço, não estamos apenas desenhando paredes e tetos. Estamos criando sonhos, traduzindo histórias e atendendo a necessidades únicas.</p>
         </div>
+        <style>
+            .sobre-content {
+                display: flex;
+                align-items: flex-start; /* Alinha o texto no topo da imagem */
+                gap: 30px; /* Espaço entre a imagem e o texto */
+            }
+    
+            .sobre-content img {
+                width: 200px; /* Define uma largura fixa para a imagem */
+                height: auto; /* Mantém a proporção da imagem */
+                border-radius: 10px; /* Adiciona borda arredondada (opcional) */
+                object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            }
+    
+            .sobre-content p {
+                max-width: 600px; /* Aumentei a largura máxima do texto */
+                font-size: 18px;
+                line-height: 1.8;
+                text-align: justify; /* Texto justificado */
+                margin: 0; /* Remove a margem automática */
+                flex: 1; /* Faz o texto ocupar o espaço restante */
+                height: 100%; /* Faz o texto ter a mesma altura da imagem */
+                display: flex;
+                align-items: center; /* Centraliza o texto verticalmente */
+            }
+    
+            /* Responsividade */
+            @media (max-width: 768px) {
+                .sobre-content {
+                    flex-direction: column; /* Faz a imagem ficar em cima no celular */
+                    align-items: center; /* Centraliza a imagem e o texto */
+                    gap: 20px; /* Reduz o espaço entre a imagem e o texto */
+                }
+    
+                .sobre-content img {
+                    margin-bottom: 20px; /* Espaço abaixo da imagem no celular */
+                }
+    
+                .sobre-content p {
+                    max-width: 100%; /* Ocupa toda a largura em telas menores */
+                    text-align: justify; /* Mantém o texto justificado em telas menores */
+                    height: auto; /* Remove a altura fixa em telas menores */
+                    align-items: flex-start; /* Alinha o texto no topo em telas menores */
+                }
+            }
+        </style>
     </section>
+    
 
     <section id="portfolio" class="container">
         <h2>Portfólio</h2>
