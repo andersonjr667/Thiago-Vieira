@@ -11,8 +11,8 @@ body {
     line-height: 1.6;
     background-color: #F5F5F5;
     color: #333;
-    border: 2px solid #1D2B3A; /* Linha fina na borda da página */
-    margin: 10px; /* Margem para a linha não ficar colada na borda da janela */
+    margin: 0; /* Remove a margem ao redor do body */
+    padding: 0; /* Remove o padding ao redor do body */
     overflow-x: hidden; /* Evita que a margem afete o rodapé */
 }
 
@@ -260,6 +260,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
+    margin: 0; /* Remove qualquer margem que possa estar limitando a largura */
+    border: none; /* Remove a borda, se houver */
 }
 
 footer .social-links {
