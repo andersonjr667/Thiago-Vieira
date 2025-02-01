@@ -278,6 +278,12 @@ footer .social-links a:hover {
     color: #FFA500;
 }
 
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .gallery {
@@ -296,4 +302,24 @@ footer .social-links a:hover {
     .banner p {
         font-size: 20px;
     }
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #1D2B3A;
+}
+
+.slick-dots li button:before {
+    color: #1D2B3A;
 }

@@ -6,8 +6,9 @@
     <title>Portfólio - Thiago Vieira</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
-        /* Estilos adicionais para o portfólio */
         .portfolio-header {
             background: url('images/banner.jpg') no-repeat center center/cover;
             color: white;
@@ -18,13 +19,13 @@
         .portfolio-header h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #1D2B3A; /* Azul escuro */
+            color: #1D2B3A;
         }
 
         .portfolio-header p {
             font-size: 24px;
             margin-bottom: 40px;
-            color: #1D2B3A; /* Azul escuro */
+            color: #1D2B3A;
         }
 
         .portfolio-section {
@@ -44,23 +45,23 @@
             margin-bottom: 20px;
         }
 
-        .portfolio-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .carousel {
+            margin: 40px auto;
+            max-width: 1000px;
         }
 
-        .portfolio-gallery img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
+        .carousel img {
+            width: 100%;
+            height: auto;
             border-radius: 10px;
-            transition: transform 0.3s ease;
         }
 
-        .portfolio-gallery img:hover {
-            transform: scale(1.05);
+        .slick-prev:before, .slick-next:before {
+            color: #1D2B3A;
+        }
+
+        .slick-dots li button:before {
+            color: #1D2B3A;
         }
 
         .back-to-home {
@@ -72,7 +73,7 @@
         .back-to-home a {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #1D2B3A; /* Azul escuro */
+            background-color: #1D2B3A;
             color: white;
             font-size: 16px;
             font-weight: bold;
@@ -82,10 +83,9 @@
         }
 
         .back-to-home a:hover {
-            background-color: #15202B; /* Tom mais escuro de azul */
+            background-color: #15202B;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .portfolio-header h1 {
                 font-size: 36px;
@@ -95,7 +95,7 @@
                 font-size: 20px;
             }
 
-            .portfolio-gallery img {
+            .carousel img {
                 width: 100%;
                 height: auto;
             }
@@ -106,55 +106,52 @@
 
     <header id="header"></header>
 
-    <!-- Cabeçalho do Portfólio -->
     <section class="portfolio-header">
         <h1>Portfólio Completo</h1>
         <p>Confira alguns dos meus projetos mais recentes.</p>
     </section>
 
-    <!-- Grupo 1 -->
     <section class="portfolio-section">
         <h2>Lar Família Nabuco</h2>
         <p>Descrição.</p>
-        <div class="portfolio-gallery">
-            <img src="images/projeto1.png" alt="Projeto 1">
-            <img src="images/projeto2.png" alt="Projeto 2">
-            <img src="images/projeto3.png" alt="Projeto 3">
-            <img src="images/projeto4.png" alt="Projeto 4">
+        <div class="carousel">
+            <div><img src="images/projeto1.png" alt="Projeto 1"></div>
+            <div><img src="images/projeto2.png" alt="Projeto 2"></div>
+            <div><img src="images/projeto3.png" alt="Projeto 3"></div>
+            <div><img src="images/projeto4.png" alt="Projeto 4"></div>
         </div>
     </section>
 
-    <!-- Grupo 2 -->
     <section class="portfolio-section">
         <h2>Lar Família Benízio</h2>
         <p>Descrição.</p>
-        <div class="portfolio-gallery">
-            <img src="images/projeto6.png" alt="Projeto 6">
-            <img src="images/projeto7.png" alt="Projeto 7">
-            <img src="images/projeto8.png" alt="Projeto 8">
-            <img src="images/projeto9.png" alt="Projeto 9">
+        <div class="carousel">
+            <div><img src="images/projeto6.png" alt="Projeto 6"></div>
+            <div><img src="images/projeto7.png" alt="Projeto 7"></div>
+            <div><img src="images/projeto8.png" alt="Projeto 8"></div>
+            <div><img src="images/projeto9.png" alt="Projeto 9"></div>
         </div>
     </section>
 
-    <!-- Grupo 3 -->
     <section class="portfolio-section">
         <h2>Lar Família Carvalho</h2>
         <p>Descrição.</p>
-        <div class="portfolio-gallery">
-            <img src="images/projeto11.png" alt="Projeto 11">
-            <img src="images/projeto12.png" alt="Projeto 12">
-            <img src="images/projeto13.png" alt="Projeto 13">
-            <img src="images/projeto14.png" alt="Projeto 14">
+        <div class="carousel">
+            <div><img src="images/projeto11.png" alt="Projeto 11"></div>
+            <div><img src="images/projeto12.png" alt="Projeto 12"></div>
+            <div><img src="images/projeto13.png" alt="Projeto 13"></div>
+            <div><img src="images/projeto14.png" alt="Projeto 14"></div>
         </div>
     </section>
 
-    <!-- Botão para voltar à página inicial -->
     <div class="back-to-home">
         <a href="index.html">Voltar à Página Inicial</a>
     </div>
 
     <footer id="footer"></footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

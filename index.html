@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiago Vieira - Arquiteto e Empresario</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!-- Nova fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
         /* Estilos adicionais para o banner */
         .banner {
@@ -18,14 +20,14 @@
         .banner h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            color: #1D2B3A; /* Azul escuro */
-            font-family: 'Playfair Display', serif; /* Nova fonte para o título */
+            color: #1D2B3A;
+            font-family: 'Playfair Display', serif;
         }
 
         .banner p {
             font-size: 24px;
             margin-bottom: 40px;
-            color: #1D2B3A; /* Azul escuro */
+            color: #1D2B3A;
         }
 
         .cta-button {
@@ -58,7 +60,7 @@
             border-radius: 15px;
             object-fit: cover;
             margin-right: 20px;
-            border: 2px solid #1D2B3A; /* Borda fina na imagem */
+            border: 2px solid #1D2B3A;
         }
 
         .sobre-content p {
@@ -67,19 +69,24 @@
             line-height: 1.6;
         }
 
-        /* Estilos para a galeria de portfólio */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
+        /* Estilos para o carrossel */
+        .carousel {
+            margin: 40px auto;
+            max-width: 1000px;
         }
 
-        .gallery img {
-            width: 250px;
-            height: 180px;
-            object-fit: cover;
+        .carousel img {
+            width: 100%;
+            height: auto;
             border-radius: 10px;
+        }
+
+        .slick-prev:before, .slick-next:before {
+            color: #1D2B3A;
+        }
+
+        .slick-dots li button:before {
+            color: #1D2B3A;
         }
 
         /* Estilos para o botão "Ver mais projetos" */
@@ -91,7 +98,7 @@
         .ver-mais-projetos a {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #1D2B3A; /* Azul escuro */
+            background-color: #1D2B3A;
             color: white;
             font-size: 16px;
             font-weight: bold;
@@ -101,7 +108,7 @@
         }
 
         .ver-mais-projetos a:hover {
-            background-color: #15202B; /* Tom mais escuro de azul */
+            background-color: #15202B;
         }
 
         /* Estilos para a seção de serviços */
@@ -122,14 +129,14 @@
             text-align: center;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer; /* Adiciona o cursor de clique */
+            cursor: pointer;
         }
 
         .service-item a {
-            text-decoration: none; /* Remove o sublinhado */
-            color: #1D2B3A; /* Cor do texto no azul do site */
-            font-size: 18px; /* Aumenta o tamanho do texto */
-            display: block; /* Faz com que o link ocupe todo o espaço do botão */
+            text-decoration: none;
+            color: #1D2B3A;
+            font-size: 18px;
+            display: block;
             width: 100%;
             height: 100%;
         }
@@ -176,11 +183,6 @@
                 margin: 0 auto 20px;
             }
 
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .service-item {
                 width: calc(50% - 20px);
             }
@@ -215,12 +217,12 @@
 
     <section id="portfolio" class="container">
         <h2>Portfólio</h2>
-        <div class="gallery">
-            <img src="images/projeto1.png" alt="Projeto 1">
-            <img src="images/projeto2.png" alt="Projeto 2">
-            <img src="images/projeto3.png" alt="Projeto 3">
+        <div class="carousel">
+            <div><img src="images/projeto1.png" alt="Projeto 1"></div>
+            <div><img src="images/projeto2.png" alt="Projeto 2"></div>
+            <div><img src="images/projeto3.png" alt="Projeto 3"></div>
+            <div><img src="images/projeto4.png" alt="Projeto 4"></div>
         </div>
-        <!-- Botão "Ver mais projetos" -->
         <div class="ver-mais-projetos">
             <a href="portfolio.html">Ver mais projetos</a>
         </div>
@@ -245,6 +247,8 @@
 
     <footer id="footer"></footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
