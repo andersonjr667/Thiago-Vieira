@@ -237,26 +237,6 @@ footer p {
     color: #fff;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .banner {
-        padding: 80px 20px;
-    }
-
-    .banner h1 {
-        font-size: 36px;
-    }
-
-    .banner p {
-        font-size: 20px;
-    }
-}
-
 /* Estilos para o carrossel */
 .carousel {
     margin: 40px auto;
@@ -272,12 +252,25 @@ footer p {
     margin: 0 10px; /* Adiciona margem entre as imagens */
 }
 
+/* Melhorias no carrossel */
+.slick-slide {
+    padding: 0 10px;
+}
+
+.slick-prev, .slick-next {
+    z-index: 10;
+}
+
 .slick-prev:before, .slick-next:before {
-    color: #1D2B3A;
+    color: #fc9403; /* Cor laranja do tema */
 }
 
 .slick-dots li button:before {
-    color: #1D2B3A;
+    color: #fc9403;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #e07e02;
 }
 
 /* Responsividade */
