@@ -184,6 +184,31 @@ section h2 {
     cursor: pointer; /* Indica que a imagem é clicável */
     transition: transform 0.3s ease-in-out;
 }
+/* Modal para exibir a imagem em tela cheia */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização da imagem no modal */
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.modal img:hover {
+    transform: scale(1.2);
+}
 
 /* Serviços */
 .service-list {
