@@ -16,7 +16,84 @@ body {
     overflow-x: hidden; /* Evita que a margem afete o rodapé */
 }
 
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1D2B3A;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
 
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 70px; /* Aumenta o tamanho do logo */
+    width: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #FFB74D;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFA500;
+}
+
+/* Menu no Celular */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #FFB74D;
+}
+
+/* Responsividade - Menu Mobile */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1D2B3A;
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .cta-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
 
 /* Estilo para o conteúdo da página */
 section {
@@ -93,9 +170,8 @@ section h2 {
 /* Portfólio */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre as imagens */
+    gap: 20px;
     margin-top: 40px;
 }
 
@@ -104,33 +180,6 @@ section h2 {
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    cursor: pointer; /* Indica que a imagem é clicável */
-    transition: transform 0.3s ease-in-out;
-}
-/* Modal para exibir a imagem em tela cheia */
-.modal {
-    display: none; /* Inicialmente oculto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilização da imagem no modal */
-.modal img {
-    max-width: 90%;
-    max-height: 90%;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Efeito de zoom ao passar o mouse */
-.modal img:hover {
-    transform: scale(1.2);
 }
 
 /* Serviços */
@@ -237,6 +286,26 @@ footer p {
     color: #fff;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner {
+        padding: 80px 20px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+}
+
 /* Estilos para o carrossel */
 .carousel {
     margin: 40px auto;
@@ -252,25 +321,12 @@ footer p {
     margin: 0 10px; /* Adiciona margem entre as imagens */
 }
 
-/* Melhorias no carrossel */
-.slick-slide {
-    padding: 0 10px;
-}
-
-.slick-prev, .slick-next {
-    z-index: 10;
-}
-
 .slick-prev:before, .slick-next:before {
-    color: #fc9403; /* Cor laranja do tema */
+    color: #1D2B3A;
 }
 
 .slick-dots li button:before {
-    color: #fc9403;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #e07e02;
+    color: #1D2B3A;
 }
 
 /* Responsividade */
@@ -284,4 +340,4 @@ footer p {
     .carousel img {
         height: 150px; /* Reduz ainda mais a altura em telas muito pequenas */
     }
-}
+    }
