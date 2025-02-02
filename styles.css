@@ -170,8 +170,9 @@ section h2 {
 /* Portfólio */
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre as imagens */
     margin-top: 40px;
 }
 
@@ -180,6 +181,8 @@ section h2 {
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
+    cursor: pointer; /* Indica que a imagem é clicável */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Serviços */
